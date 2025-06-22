@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplikasi Absen Siswa PKL</title>
+    <title>Aplikasi Absen Siswa</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,7 +21,7 @@
     </style>
 </head>
 <body>
-    <h1>Form Absen Siswa PKL</h1>
+    <h1>Form Absen Siswa</h1>
     <form id="absenForm">
         <label for="nama">Nama Lengkap:</label>
         <input type="text" id="nama" required><br>
@@ -102,7 +102,7 @@
             formData.append("file", foto);
 
             // Ganti 'YOUR_GOOGLE_DRIVE_UPLOAD_URL' dengan URL upload Google Drive Anda
-            fetch('https://drive.google.com/drive/folders/1Tz0TLV4v2uYDvSEJ2scNRm1j8xL3_knh?usp=sharing', {
+            fetch('https://script.google.com/macros/s/AKfycbweSHdfmTHF75IlJhh1XgIeEcyRi5eoMY-3H986I-dAujXanDofYH8ox8vGVMpmh3Uyew/exec', {
                 method: 'POST',
                 body: formData
             })
@@ -111,7 +111,7 @@
                 const fotoUrl = data.url; // Ganti dengan cara Anda mendapatkan URL foto
 
                 // Kirim data ke Google Sheets
-                fetch('https://script.google.com/macros/s/AKfycbyX6kN5VT5HlYWEnE8x_pOtAHUZJr4sSNXBXnI-L0FDfQCkIoflSkzqROiMRkTaHUxH/exec', {
+                fetch('https://script.google.com/macros/s/AKfycbyzbCopfn_546krmFFQ2ZVm4A40PdUiU29jsQohEVu5B-R355npRLeN3ChQsIJXqyzM/exec', {
                     method: 'POST',
                     body: JSON.stringify({ nama: nama, kelas: kelas, status: status, tanggalWaktu: tanggalWaktu, lokasi: lokasi, fotoUrl: fotoUrl }),
                     headers: {
